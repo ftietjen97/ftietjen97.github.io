@@ -18,7 +18,7 @@
             <img src="wist_stochastic_traces.svg" alt="WiST logo">
             <h1>Finja Tietjen</h1>
     
-    new text
+    different text
 </body>
 
 </html>
