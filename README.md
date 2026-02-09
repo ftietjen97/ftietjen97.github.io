@@ -12,8 +12,13 @@
 </head>
 
 <body>
+    <div id="wrapper">
+        <div class="container">
+            
+            <img src="wist_stochastic_traces.svg" alt="WiST logo">
+            <h1>Finja Tietjen</h1>
     
-    n
+    new text
 </body>
 
 </html>
