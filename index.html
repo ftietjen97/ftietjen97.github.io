@@ -15,7 +15,7 @@
       --muted: #6a625c;
       --line: #e4dcd6;
     }
-
+ 
     @media (prefers-color-scheme: dark) {
       :root {
         --copper: #d08a5c;
@@ -27,11 +27,11 @@
         --line: #3a332f;
       }
     }
-
+ 
     * { box-sizing: border-box; }
-
+ 
     html { scroll-behavior: smooth; }
-
+ 
     body {
       margin: 0;
       background: var(--bg);
@@ -40,51 +40,70 @@
       font-size: 1.0625rem;
       line-height: 1.65;
     }
-
+ 
     .page {
       max-width: 44rem;
       margin: 0 auto;
       padding: 0 1.25rem 4rem;
     }
-
+ 
     /* Header */
     header {
       padding: 3rem 0 2rem;
       border-bottom: 4px solid var(--copper);
     }
-
+ 
+    .intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+ 
     header img {
       display: block;
-      width: 50%;
+      width: 11rem;
+      flex-shrink: 0;
       aspect-ratio: 4 / 5;
       object-fit: cover;
       object-position: center 25%; /* keeps the face in frame when the photo is cropped */
       border-radius: 2px;
-      margin-top: 1.75rem;
       background: var(--line);
     }
-
-
+ 
+    /* On phones: text first, photo underneath at half width */
+    @media (max-width: 32rem) {
+      .intro { flex-direction: column; align-items: flex-start; }
+      header img { width: 50%; }
+    }
+ 
     h1 {
       margin: 0 0 0.5rem;
       font-size: clamp(2rem, 6vw, 2.75rem);
       line-height: 1.15;
       color: var(--copper);
     }
-
+ 
     header p {
       margin: 0;
       color: var(--muted);
     }
-
+ 
     /* Sections */
     section { margin-top: 3rem; }
-
+ 
     h2 {
       margin: 0 0 1.25rem;
       padding-bottom: 0.5rem;
       font-size: 1.5rem;
       border-bottom: 1px solid var(--line);
+    }
+    /* All links in copper, including visited and clicked ones */
+    a,
+    a:link,
+    a:visited,
+    a:active {
+      color: var(--copper);
     }
 
     ul {
@@ -92,57 +111,66 @@
       margin: 0;
       padding: 0;
     }
-
+ 
     li {
       margin-bottom: 1.5rem;
       padding-left: 1rem;
       border-left: 3px solid var(--copper);
     }
-
+ 
     li a {
       font-weight: bold;
       color: var(--copper);
       text-decoration: none;
     }
-
+ 
     li a:hover,
     li a:focus-visible {
       color: var(--copper-dark);
       text-decoration: underline;
     }
-
+ 
     a:focus-visible {
       outline: 2px solid var(--copper);
       outline-offset: 3px;
     }
-
+ 
     li p {
       margin: 0.25rem 0 0;
       color: var(--muted);
     }
-
-    footer {
-      margin-top: 4rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--line);
+ 
+    .contact {
+      margin-top: 1.5rem;
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
-
-    footer a { color: var(--copper); }
+ 
+    .contact p { margin: 0 0 0.25rem; }
+ 
+    .contact a { color: var(--copper); }
+ 
+    .contact a:hover { color: var(--copper-dark); }
   </style>
 </head>
 <body>
   <div class="page">
 
+
     <header>
-      <h1>Finja Tietjen</h1>
-      <p>Researcher in condensed matter physics, at Chalmers University of Technology. I study non-equilibrium dynamics and phase transitions.</p>
-      <img src="profilbild_prof.jpg" alt="Photo of Finja Tietjen">
+      <div class="intro"> 
+        <h1>Finja Tietjen</h1>
+        <p>Doctoral researcher in condensed matter physics at Chalmers University of Technology. </p>
+        <p>I study non-equilibrium dynamics and phase transitions.</p>
+      </div>
+
+      </div>
+        <img src="profilbild_prof.jpg" alt="Photo of Finja Tietjen">
+      </div>   
     </header>
 
     <div class="contact">
-      <p>Contact: <a href="mailto:you@example.com">you@example.com</a> &nbsp;|&nbsp; <a href="cv.pdf">CV (PDF)</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></p>
+      <p>Contact: <a href="mailto:finja.tietjen@chalmers.se">finja.tietjen@chalmers.se</a> &nbsp;|&nbsp; <a href="cv.pdf">CV (PDF)</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/finja-tietjen-a9b295145/">LinkedIn</a></p>
     </div>
 
     <main>
@@ -168,7 +196,7 @@
         </ul>
       </section>
 
-      <section id="news">
+      <!-- <section id="news">
         <h2>Current news</h2>
         <ul>
           <li>
@@ -184,22 +212,22 @@
             <p>September 2026. What the interview covers.</p>
           </li>
         </ul>
-      </section>
+      </section> -->
 
       <section id="science-communication">
         <h2>Activities in science communication</h2>
         <ul>
           <li>
-            <a href="https://example.com/podcast">Guest on [podcast name]</a>
-            <p>An episode explaining [topic] for a general audience.</p>
+            <a href="https://pintofscience.se/event/pint-of-science-tuesday-goeteborg/">Speaker for Pint of Science</a>
+            <p>Popular science talk to explain the emergence of quadrupolar order as a crime story.</p>
           </li>
           <li>
-            <a href="https://example.com/school-visit">School outreach programme</a>
-            <p>Workshops for pupils aged 12 to 16 on [topic].</p>
+            <a href="https://example.com/school-visit">Tutorials</a>
+            <p>Tutorials to deepen, summarize and refresh the contents of courses on Quantum Mechanics and classical physics.</p>
           </li>
           <li>
-            <a href="https://example.com/blog">Blog: [blog title]</a>
-            <p>Short articles on [topic], written without jargon.</p>
+            <a href="https://grossganzfinja.wordpress.com/">Blog: Im Großen und Ganzen</a>
+            <p>Short articles on different topics within physics that I encountered over the years, written without jargon and mostly in German.</p>
           </li>
         </ul>
       </section>
