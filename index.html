@@ -1,24 +1,211 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Finja Tietjen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finja Tietjen | Physicist</title>
+  <meta name="description" content="Research, news and science communication by Finja Tietjen.">
+  <style>
+    :root {
+      --copper: #8a4b2a;        /* dark metallic copper: main accent */
+      --copper-dark: #6b3519;   /* hover / pressed */
+      --copper-light: #b87333;  /* subtle highlights */
+      --bg: #ffffff;
+      --text: #2a2522;
+      --muted: #6a625c;
+      --line: #e4dcd6;
+    }
 
-    <meta charset="UTF-8">
-    <meta name="description" content="Finja Tietjen personal website">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --copper: #d08a5c;
+        --copper-dark: #e5a67d;
+        --copper-light: #b87333;
+        --bg: #1b1816;
+        --text: #efe9e4;
+        --muted: #aaa099;
+        --line: #3a332f;
+      }
+    }
 
-    <link rel="stylesheet" href="skeleton.css" />
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 0 1.25rem 4rem;
+    }
+
+    /* Header */
+    header {
+      padding: 3rem 0 2rem;
+      border-bottom: 4px solid var(--copper);
+    }
+
+    header img {
+      display: block;
+      width: 100%;
+      max-height: 22rem;
+      object-fit: cover;
+      object-position: center 25%; /* keeps the face in frame when the photo is cropped */
+      border-radius: 2px;
+      margin-bottom: 1.75rem;
+      background: var(--line);
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      line-height: 1.15;
+      color: var(--copper);
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Sections */
+    section { margin-top: 3rem; }
+
+    h2 {
+      margin: 0 0 1.25rem;
+      padding-bottom: 0.5rem;
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--copper);
+    }
+
+    li a {
+      font-weight: bold;
+      color: var(--copper);
+      text-decoration: none;
+    }
+
+    li a:hover,
+    li a:focus-visible {
+      color: var(--copper-dark);
+      text-decoration: underline;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--copper);
+      outline-offset: 3px;
+    }
+
+    li p {
+      margin: 0.25rem 0 0;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer a { color: var(--copper); }
+  </style>
 </head>
-
 <body>
-    <div id="wrapper">
-        <div class="container">
-            
-            <img src="wist_stochastic_traces.svg" alt="WiST logo">
-            <h1>Finja Tietjen</h1>
-    
-    new text
-</body>
+  <div class="page">
 
+    <header>
+      <!-- Replace photo.jpg with your own image file (same folder as index.html) -->
+      <img src="photo.jpg" alt="Photo of Finja Tietjen">
+      <h1>Finja Tietjen</h1>
+      <p>Researcher in condensed matter physics, at Chalmers University of Technology. I study non-equilibrium dynamics and phase transitions.</p>
+    </header>
+
+    <main>
+      <section id="publications">
+        <h2>Scientific publications</h2>
+        <ul>
+          <li>
+            <a href="https://orcid.org/0000-0000-0000-0000">ORCID profile</a>
+            <p>My persistent researcher identifier, with a verified list of my work.</p>
+          </li>
+          <li>
+            <a href="https://doi.org/your-doi-1">Title of your first paper</a>
+            <p>Journal Name, 2026. One or two sentences on what you found and why it matters.</p>
+          </li>
+          <li>
+            <a href="https://doi.org/your-doi-2">Title of your second paper</a>
+            <p>Journal Name, 2025. A short plain-language summary of the main result.</p>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/">Full publication list on Google Scholar</a>
+            <p>All papers, citations and preprints in one place.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="news">
+        <h2>Current news</h2>
+        <ul>
+          <li>
+            <a href="https://example.com/news-1">New grant awarded for [project]</a>
+            <p>November 2026. Short description of the news item.</p>
+          </li>
+          <li>
+            <a href="https://example.com/news-2">Talk at [conference name]</a>
+            <p>October 2026. What you presented and where to find the slides.</p>
+          </li>
+          <li>
+            <a href="https://example.com/news-3">Interview in [outlet]</a>
+            <p>September 2026. What the interview covers.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="science-communication">
+        <h2>Activities in science communication</h2>
+        <ul>
+          <li>
+            <a href="https://example.com/podcast">Guest on [podcast name]</a>
+            <p>An episode explaining [topic] for a general audience.</p>
+          </li>
+          <li>
+            <a href="https://example.com/school-visit">School outreach programme</a>
+            <p>Workshops for pupils aged 12 to 16 on [topic].</p>
+          </li>
+          <li>
+            <a href="https://example.com/blog">Blog: [blog title]</a>
+            <p>Short articles on [topic], written without jargon.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Contact: <a href="mailto:you@example.com">you@example.com</a></p>
+      <p><a href="cv.pdf">CV (PDF)</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></p>
+    </footer>
+
+  </div>
+</body>
 </html>
