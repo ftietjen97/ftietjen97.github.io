@@ -55,14 +55,15 @@
 
     header img {
       display: block;
-      width: 100%;
-      max-height: 22rem;
+      width: 50%;
+      aspect-ratio: 4 / 5;
       object-fit: cover;
       object-position: center 25%; /* keeps the face in frame when the photo is cropped */
       border-radius: 2px;
-      margin-bottom: 1.75rem;
+      margin-top: 1.75rem;
       background: var(--line);
     }
+
 
     h1 {
       margin: 0 0 0.5rem;
@@ -135,10 +136,9 @@
   <div class="page">
 
     <header>
-      <!-- Replace photo.jpg with your own image file (same folder as index.html) -->
-      <img src="profilbild_prof.jpg" alt="Photo of Finja Tietjen">
       <h1>Finja Tietjen</h1>
       <p>Researcher in condensed matter physics, at Chalmers University of Technology. I study non-equilibrium dynamics and phase transitions.</p>
+      <img src="profilbild_prof.jpg" alt="Photo of Finja Tietjen">
     </header>
 
     <div class="contact">
@@ -150,20 +150,20 @@
         <h2>Scientific publications</h2>
         <ul>
           <li>
-            <a href="https://orcid.org/0000-0000-0000-0000">ORCID profile</a>
-            <p>My persistent researcher identifier, with a verified list of my work.</p>
+            <a href="https://doi.org/10.1093/pnasnexus/pgaf055">Ultrafast entropy production in nonequilibrium magnets</a>
+            <p>PNAS Nexus, 2025. We used stochastic thermodynamics to study ultrafast magnetization dynamics and found entropy production arising from inertial contributions.</p>
           </li>
           <li>
-            <a href="https://doi.org/your-doi-1">Title of your first paper</a>
-            <p>Journal Name, 2026. One or two sentences on what you found and why it matters.</p>
+            <a href="https://doi.org/10.1038/s42005-026-02844-9">Quantifying non-Markovianity in magnetization dynamics via entropy production rates</a>
+            <p>Communications Physics, 2026. We introduce entropy production rates as a basis for quantifying non-Markovianity in ultrafast magnetization dynamics.</p>
           </li>
           <li>
-            <a href="https://doi.org/your-doi-2">Title of your second paper</a>
-            <p>Journal Name, 2025. A short plain-language summary of the main result.</p>
-          </li>
-          <li>
-            <a href="https://scholar.google.com/">Full publication list on Google Scholar</a>
+            <a href="https://scholar.google.com/citations?user=Ict-uBEAAAAJ&hl=en&oi=ao">Full publication list on Google Scholar</a>
             <p>All papers, citations and preprints in one place.</p>
+          </li>
+          <li>
+            <a href="https://orcid.org/0009-0003-0285-8641">ORCID profile</a>
+            <p>My persistent researcher identifier, with a verified list of my work.</p>
           </li>
         </ul>
       </section>
@@ -206,7 +206,7 @@
     </main>
 
     <footer>
-      <p> She believed she could and so she did. </p>
+      <p> She believed she could, and so she did. </p>
     </footer>
 
   </div>
